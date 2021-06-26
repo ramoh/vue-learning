@@ -35,6 +35,7 @@ export default {
   background-color: rgb(243, 247, 245);
 }
 #footer {
+  height: 100px;
   justify-self: flex-end;
   overflow: hidden;
   background-color: rgb(182, 182, 182);
