@@ -2,22 +2,23 @@
   <base-layout>
     <template slot="header">
       <div id="headerContainer">
-        <nav class="ui navbar">
-          <div class="ui large secondary menu">
-            <router-link to="/about" exact class="item">About</router-link>
-            <router-link to="/charts" exact class="item">Charts</router-link>
-            <router-link to="/settings" exact class="item"
-              >Settings</router-link
-            >
-            <router-link
-              :to="{ name: 'users', params: { userId: 1 } }"
-              class="item"
-              >User</router-link
-            >
-          </div>
-        </nav>
-        <div id="notificationContainer">
-          <notification-count />
+        <div id="mainLabel">
+          <h2>Rajesh's Playgroud</h2>
+        </div>
+
+        <div class="ui menu">
+          <router-link to="/about" exact class="item">About</router-link>
+          <router-link to="/charts" exact class="item">Charts</router-link>
+          <router-link to="/settings" exact class="item">Settings</router-link>
+          <router-link
+            :to="{ name: 'users', params: { userId: 1 } }"
+            class="item"
+            >User</router-link
+          >
+        </div>
+
+        <div id="notificationContainer" class="right menu">
+          <notification-count class="item" />
         </div>
       </div>
     </template>
@@ -59,6 +60,9 @@ body {
 #notificationContainer {
   display: flex;
   justify-content: flex-end;
+  flex: 1;
+}
+#mainLabel {
   flex: 1;
 }
 </style>
